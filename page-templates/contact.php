@@ -37,7 +37,7 @@ get_header();?>
                 while( have_rows('form_section') ): the_row();?>
                 <h2 class="heading heading__7 mb1"><?php the_sub_field('heading');?></h2>
                 <p class="mb1"><?php the_sub_field('copy');?></p>
-                    <?php echo do_shortcode('[contact-form-7 id="267" title="Untitled"]');?>
+                    <?php echo do_shortcode('[contact-form-7 id="510" title="Contact Form"]');?>
                 <?php endwhile; endif;?>
             </div>
         </div>
