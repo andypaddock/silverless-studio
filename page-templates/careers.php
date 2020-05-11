@@ -23,14 +23,14 @@ get_header();?>
     <div class="outer-container mb10">
         <div class="container content">
             <div class="contact-details">
-                <h2 class="heading heading__7">Silverless Ltd</h2>
-                <p><?php the_field('address', 'options');?></p>
-                <a href="mailto:<?php the_field('email_-_careers', 'options');?>" class="naked-link mt2"><?php the_field('email_-_careers', 'options');?></a>
-                <br/>
-                <a href="tel:<?php the_field('phone_number', 'options');?>" class="naked-link"><?php the_field('phone_number', 'options');?></a>
-
-                <?php get_template_part("template-parts/social");?>
-
+                <div class="sticky">
+                    <h2 class="heading heading__7">Silverless Ltd</h2>
+                    <p><?php the_field('address', 'options');?></p>
+                    <a href="mailto:<?php the_field('email_-_careers', 'options');?>" class="naked-link mt2"><?php the_field('email_-_careers', 'options');?></a>
+                    <br/>
+                    <a href="tel:<?php the_field('phone_number', 'options');?>" class="naked-link"><?php the_field('phone_number', 'options');?></a>
+                    <?php get_template_part("template-parts/social");?>
+                </div>
             </div>
             <div class="form-section">
                 <?php if( have_rows('form_section') ):

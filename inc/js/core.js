@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
       }, 500);
     };
 
-    $('.scroll-arrow').click(function(event){
+    $('.content .scroll-arrow').click(function(event){
   scrollUp();
   event.preventDefault();
 });

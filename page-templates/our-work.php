@@ -31,7 +31,7 @@ get_header();?>
                 <a href="<?php the_sub_field('button_target');?>" class="button button__bare button__bare--brand"><?php the_sub_field('button_text');?></a>
             </div>
             <div class="image" style="background:url(<?php echo $leaderBackground['url'];?>);">
-                <a href=""></a>
+                <a href="<?php the_sub_field('button_target');?>"></a>
             </div>
         </div><!--container-->
             <?php endwhile; endif;?>

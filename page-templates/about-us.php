@@ -23,17 +23,20 @@ get_header();?>
     <div class="outer-container mb10">
         <div class="container content">
             <div class="toggle-list">
-                <?php if( have_rows('services_toggle') ):
-    			while( have_rows('services_toggle') ): the_row();?>
-                <div class="toggle-list__item">
-                    <div class="heading heading__4 trigger">
-                        <?php the_sub_field('heading');?>
+                <div class="sticky">
+                    <?php if( have_rows('services_toggle') ):
+        			while( have_rows('services_toggle') ): the_row();?>
+                    <div class="toggle-list__item">
+                        <div class="heading heading__4 trigger">
+                            <?php the_sub_field('heading');?>
+                        </div>
+                        <div class="target">
+                            <?php the_sub_field('content');?>
+                        </div>
                     </div>
-                    <div class="target">
-                        <?php the_sub_field('content');?>
-                    </div>
+                    <?php endwhile; endif;?>
                 </div>
-            <?php endwhile; endif;?>
+
             </div>
             <div class="text-content">
                 <?php if( have_rows('page_copy') ):

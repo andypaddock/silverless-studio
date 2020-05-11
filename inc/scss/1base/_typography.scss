@@ -30,7 +30,7 @@ p {
     text-transform: uppercase;
   }
   &__2 {
-    font: ($font_size*3)+px / ($font_line-height*2.7)+px $font_primary;
+    font: ($font_size*3)+px / ($font_line-height*2)+px $font_primary;
   }
   &__3 {
     font: ($font_size*2)+px / ($font_line-height*2.7)+px $font_primary;
@@ -67,5 +67,8 @@ p {
 
   &.color-brand-highlight {
       color: $color_brand_highlight;
+  }
+  & + p {
+      margin-top:1rem;
   }
 }

@@ -146,21 +146,20 @@
 
 .quote {
     position: relative;
-    padding-left:5rem;
 
     svg {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
-        width:3rem;
+        width:2rem;
         path {
-            fill:$color_grey_mid;
+            fill:$color_brand_highlight;
         }
     }
     .copy {
         position: relative;
         font-family: $font_primary;
-        font-size: $font_size * 1.8px;
+        font-size: $font_size * 1.4px;
         line-height: $font_line-height * 1.5px;
         &:after {
             content:'';
@@ -169,7 +168,7 @@
             left:0;
             width:3rem;
             height:1px;
-            background: $color_grey_light;
+            background: $color_brand_highlight;
         }
     }
     .attrib {

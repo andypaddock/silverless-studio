@@ -138,5 +138,10 @@ function silverlessstudio_remove_admin_bar() {
 }
 
 add_filter( 'excerpt_length', function($length) {
-    return 18;
+    return 20;
 } );
+
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

@@ -35,7 +35,7 @@ Film & 3D</h2>
 
 					<?php get_template_part("template-parts/social");?>
 
-					<a href="<?php the_sub_field('button_target');?>" class="button button_ghost">Directions</a>
+					<a href="<?php the_sub_field('button_target');?>" class="button button__ghost">Directions</a>
 				</div>
 			</div>
 		</div>
@@ -43,7 +43,9 @@ Film & 3D</h2>
 		<div class="content-wrapper darkest-wrapper">
 			<div class="container">
 				<div class="mandatory">
-					<p>© Silverless Ltd <?php echo date('Y');?>. Registered in England, No. 8437159  VAT No. GB 101 7040 78 |Privacy policy | Terms & Conditions</p>
+					<p>© Silverless Ltd <?php echo date('Y');?>. Registered in England, No. 8437159  VAT No. GB 101 7040 78
+						<a href="/privacy-policy/">Privacy policy</a>
+						<a href="/terms-conditions/">Terms & Conditions</a></p>
 				</div>
 			</div>
 		</div>
