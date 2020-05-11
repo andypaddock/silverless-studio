@@ -14,9 +14,7 @@ jQuery(document).ready(function($) {
         500
       ).center;
     });
-    $('.slide-nav__item:first').addClass('hit');
-
-
+    //$('.slide-nav__item:first').addClass('hit');
 
   /* CLASS AND FOCUS ON CLICK */
 
@@ -62,6 +60,14 @@ $(".wpcf7-form-control").on('input', function() {
 	} else {
 		$(this).parents(".form-field").removeClass("contains-content");
 	}
+});
+
+$('#checker').change(function(){
+    if($(this).is(":checked")) {
+        $('.checkbox').addClass('checked');
+    } else {
+        $('.checkbox').removeClass('checked');
+    }
 });
 
 /*
@@ -211,14 +217,5 @@ $(".testimonial-carousel--next").click(function() {
 $('.testimonial-carousel--prev').click(function() {
   owlFeature.trigger('prev.owl.carousel');
 });
-
-
-
-
-
-
-
-
-
 
 }); //Don't remove ---- end of jQuery wrapper

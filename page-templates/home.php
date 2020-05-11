@@ -6,7 +6,6 @@
  */
 get_header();?>
 
-
 	<div class="container content">
 		<div class="col">
 			<div class="slide-wrapper">
@@ -22,7 +21,7 @@ get_header();?>
 
 			<div class="pad"></div>
 
-			<div id="slide<?php echo $i;?>" class="slide slide<?php echo $i;?> <?php echo $slideType;?>" style="background:url(<?php echo $slideImage['url'];?>); background-color:<?php echo $slideColor;?>">
+			<div id="slide<?php echo $i;?>" class="slide slide<?php echo $i;?> <?php echo $slideType;?>" ref-slide="<?php echo $i;?>" style="background:url(<?php echo $slideImage['url'];?>); background-color:<?php echo $slideColor;?>">
 				<div class="container">
 
 					<?php if($slideType == 'first'):?>
@@ -80,40 +79,50 @@ get_header();?>
 
 </div><!--wrapper-->
 
+<script src="<?php echo get_template_directory_uri(); ?>/inc/js/io-compiled.js"></script>
+
 <script>
 const slides = document.querySelectorAll(".slide");
+const nav = document.querySelectorAll(".slide-nav__item");
 observer = new IntersectionObserver(
   entries => {
 	entries.forEach(entry => {
+		var currentSlide = entry.target.getAttribute('ref-slide');
+		var currentNav = nav[(currentSlide - 1)] ;
 	  if (entry.isIntersecting) {
 		entry.target.classList.add('active');
+		currentNav.classList.add('hit');
 	  } else {
 		entry.target.classList.remove("active");
+		currentNav.classList.remove('hit');
 	  }
 	});
   },
   {
-	threshold: 0.5
-  }
-);
+	threshold: [0.5],
+	trackVisibility: true,
+	delay:100
+  });
 var s = 0;
 slides.forEach(slide => {
   observer.observe(slide);
 });
 
-const slideNumber = document.querySelectorAll('.slide').length;
-const lastSlide = "slide" + slideNumber;
-const target = document.getElementsByClassName(lastSlide);
-removeNav = new IntersectionObserver(
-  entries => {
-  },
-  {
-	threshold: 0.5
-  }
-);
+const navSwitch = document.querySelector('.slide-wrapper');
+const navWrapper = document.querySelector('.slide-nav');
+navObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      navWrapper.classList.add('active');
+    } else {
+      navWrapper.classList.remove('active');
+    }
+  });
+});
 
-//removeNav.observe(target);
+navObserver.observe(navSwitch);
+
+
 </script>
-
 
 <?php get_footer();?>

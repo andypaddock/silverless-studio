@@ -69,6 +69,7 @@
 						$i = 1;
 						while( have_rows('top_carousel') ): the_row();?>
 						<div id="slide<?php echo $i;?>" class="slide-nav__item" ref-slide="<?php echo $i;?>">0 <?php echo $i;?>.</div>
+
 						<?php $i++; endwhile; endif;?>
 
 					</div>
