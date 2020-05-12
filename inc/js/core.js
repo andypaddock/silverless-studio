@@ -104,64 +104,55 @@ $('#checker').change(function(){
 $(".close-feature").click(function() {
     $(".feature-toggle__item.active").removeClass("active");
 });
+*/
 
-  // ========== Add class if in viewport on page load
+// ========== Add class if in viewport on page load
 
-  $.fn.isOnScreen = function() {
-    var win = $(window);
+$.fn.isOnScreen = function() {
+  var win = $(window);
 
-    var viewport = {
-      top: win.scrollTop(),
-      left: win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-
-    return !(
-      viewport.right < bounds.left ||
-      viewport.left > bounds.right ||
-      viewport.bottom < bounds.top ||
-      viewport.top > bounds.bottom
-    );
+  var viewport = {
+    top: win.scrollTop(),
+    left: win.scrollLeft()
   };
+  viewport.right = viewport.left + win.width();
+  viewport.bottom = viewport.top + win.height();
 
-  /*$('.slide-up, .slide-down, .slide-right, .slow-fade').each(function() {
-		if ($(this).isOnScreen()) {
-			$(this).addClass('active');
-		}
-	});*/
+  var bounds = this.offset();
+  bounds.right = bounds.left + this.outerWidth();
+  bounds.bottom = bounds.top + this.outerHeight();
 
-  // ========== Add class on entering viewport
+  return !(
+    viewport.right < bounds.left ||
+    viewport.left > bounds.right ||
+    viewport.bottom < bounds.top ||
+    viewport.top > bounds.bottom
+  );
+};
 
-  $.fn.isInViewport = function() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
+$(".slide-up, .slide-down, .slide-right, .slow-fade").each(function() {
+  if ($(this).isOnScreen()) {
+    $(this).addClass("active");
+  }
+});
 
-  $(window).on("resize scroll", function() {
-    /*$('.slide-up, .slide-down, .slide-right, .slow-fade').each(function() {
-			if ($(this).isInViewport()) {
-				$(this).addClass('active');
-			}
-		});*/
+// ========== Add class on entering viewport
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on("resize scroll", function() {
+  $(".slide-up, .slide-down, .slide-right, .slow-fade").each(function() {
+    if ($(this).isInViewport()) {
+      $(this).addClass("active");
+    }
   });
-
-  // ========== Tab section height helper
-
-var tabsUpperHeight = $('.tab-section__upper').innerHeight() + 'px';
-$('.tab-section__upper__item').css("height", tabsUpperHeight);
-
-
-// ========== Tab section width helper
-var tabsUpperWidth = $('.tab-section__upper__item:not(.active) .content').innerWidth() + 'px';
-$('.tab-section__upper__item .content').css("max-width", tabsUpperWidth);
+});
 
 // ============ Carousels
 
