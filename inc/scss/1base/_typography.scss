@@ -9,6 +9,7 @@ p {
     margin:0 0 $font_line-height * .5px;
     font: $font_size+px / $font_line-height+px $font_secondary;
     font-weight: 200;
+    letter-spacing: 0.03rem;
     &.sub-heading {
         font-size: $font_size * 1.1px;
         font-weight: 400;

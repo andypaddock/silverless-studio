@@ -33,6 +33,7 @@
     grid-column: main-start / full-end;
     grid-template-columns: 15rem minmax(1rem, 65rem) minmax(0, 1fr);
     .content-wrapper {
+        @include backgroundCover;
         grid-column: 2 / 4;
         display: grid;
         grid-template-columns: minmax(1rem, 65rem) minmax(0, 1fr);
