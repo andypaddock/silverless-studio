@@ -12,7 +12,7 @@
 						<div class="content-wrapper image-wrapper dark-overlay" style="background:url(<?php echo $footerImage['url'];?>);">
 							<div class="container">
 								<div class="footer-upper-content">
-									<h2 class="heading heading__2">Photography, Film & 3D</h2>
+									<h2 class="heading heading__2">Photography, <span class="no-wrap">Film & 3D</span></h2>
 									<p>Creating the content for your brand.
 									Silverless Visual is our very own photography studio, film unit and 3D effects hub.
 									This is not an outsourced service; this is a core part of our business, seamlessly fitting into our design and development workflow.

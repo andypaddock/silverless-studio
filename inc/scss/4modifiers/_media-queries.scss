@@ -100,7 +100,7 @@
 .news-feed__item,
 .other-news .news-feed__item {
     grid-column: span 6;
-	margin-bottom: 2rem;
+	margin-bottom: 4rem;
 }
 .leaders .copy {
     grid-column: 1/5;
@@ -108,7 +108,9 @@
 .gallery {
     grid-column: 1/-1;
 }
-
+.news-summary__item .image {
+    height: 15rem;
+}
 /*---FOOTER---*/
 
 }/*---end medium mq---*/
@@ -495,6 +497,9 @@ main {
     padding: 1rem 2rem;
     width: 100%;
     text-transform: uppercase;
+}
+.news-summary__item .image {
+    height: 8rem;
 }
 /*---FOOTER---*/
 footer .silverless {
