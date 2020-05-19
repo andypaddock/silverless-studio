@@ -514,6 +514,7 @@
     &__item {
         .trigger {
             position:relative;
+            line-height: 46px;
             &:hover {
                 cursor:pointer;
             }
