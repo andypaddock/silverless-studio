@@ -28,7 +28,7 @@ get_header();?>
 				<div class="sticky">
 					<h3 class="heading heading__7">INSPIRED BY THIS PROJECT?</h3>
 					<p>Then get in contact with us to chat about working together on a similar project for your business.</p>
-					<a href="" class="button button__ghost">Contact Us</a>
+					<a href="/contact" class="button button__ghost">Contact Us</a>
 				</div>
             </div>
             <div class="text-content">

@@ -1,4 +1,4 @@
-
+//@prepros-prepend jquery.magnific-popup.js
 jQuery(document).ready(function($) {
 
     // ============ Home Slider
@@ -208,5 +208,17 @@ $(".testimonial-carousel--next").click(function() {
 $('.testimonial-carousel--prev').click(function() {
   owlFeature.trigger('prev.owl.carousel');
 });
+
+$(document).ready(function() {
+    $('.gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+        gallery:{
+            enabled:true
+        }
+    });
+});
+
+
 
 }); //Don't remove ---- end of jQuery wrapper

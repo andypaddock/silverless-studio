@@ -24,7 +24,7 @@
 				<div class="col">
 					<a href="/contact" class="button button__global">
 						<i class="fas fa-phone"></i>
-						Contact
+						<span>Contact</span>
 					</a>
 				</div>
 			</div>
@@ -52,6 +52,31 @@
 <main><!--main closes in footer-->
 
 <div class="wrapper">
+
+<div class="outer-container mobile-nav">
+	<div class='sidebar'>
+		<div class="nav-trigger">
+			<div class="hamburger-menu"></div>
+		</div>
+		<div class="quick-links">
+			<a href="/contact" class="icon">
+				<i class="fas fa-phone"></i>
+			</a>
+			<a href="mailto:hello@silverless.co.uk" class="icon">
+				<i class="fas fa-envelope"></i>
+			</a>
+			<?php get_template_part("template-parts/social");?>
+		</div>
+	</div>
+	<div class="container content">
+		<a href="<?php echo get_home_url(); ?>" alt="" title="">
+			<?php get_template_part("template-parts/logo"); ?>
+		</a>
+	</div>
+</div>
+
+
+
 		<div class="outer-container">
 			<div class='sidebar'>
 				<div class=sidebar__top>

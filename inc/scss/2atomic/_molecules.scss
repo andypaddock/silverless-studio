@@ -93,24 +93,26 @@
 
 .slide {
     @include backgroundCover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:20px;
-  margin:0;
-  height:80vh;
-  transform:scaleY(1);
-  transition: all 1s ease;
-  background-color:grey;
-  color: white;
-  opacity:0.5;
-  font-size:5em;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:1rem;
+    margin:0;
+    height:80vh;
+    transform:scaleY(1);
+    transition: all 1s ease;
+    background-color:grey;
+    color: white;
+    opacity:0.5;
+    font-size:5em;
   &.slide1 {
       transform-origin:top;
   }
   &.active {
-          @include emphasisShadow;
-    transform:scaleX(1.05);
+    @include emphasisShadow;
+    transform:scaleX(1.025);
     opacity:1;
     box-shadow: 0 0 1rem $color_grey_dark;
     background:green;
@@ -177,4 +179,15 @@
         font-size: $font_size * .8px;
         text-transform: uppercase;
     }
+}
+
+#myVideo {
+    z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  width: auto;
+  height: 100%;
 }

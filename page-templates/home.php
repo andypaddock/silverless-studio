@@ -23,7 +23,17 @@ get_header();?>
 
 			<div id="slide<?php echo $i;?>" class="slide slide<?php echo $i;?> <?php echo $slideType;?>" ref-slide="<?php echo $i;?>" style="background:url(<?php echo $slideImage['url'];?>); background-color:<?php echo $slideColor;?>">
 				<div class="container">
+					<?php
 
+					$video = get_sub_field("background_video");
+
+					if($video): ?>
+
+					<video autoplay muted id="myVideo">
+				  		<source src="<?php echo $video['url'];?>" type="video/mp4">
+					</video>
+
+					<?php endif; ?>
 					<?php if($slideType == 'first'):?>
 						<h3 class="heading heading__1"><?php the_sub_field('heading');?></h3>
 						<div class="inner-content">

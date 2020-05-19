@@ -7,7 +7,18 @@ while ( have_rows('gallery') ) : the_row();?>
     <div class="gallery__fullwidth slide-up">
         <?php $image = get_sub_field('image');?>
         <?php $imageHeight = get_sub_field('height');?>
-        <a href="<?php echo $image['url']; ?>" class="lightbox-gallery"  alt="<?php echo $image['alt']; ?>" style="background-image: url(<?php echo $image['url']; ?>); height:<?php echo $imageHeight;?>vh;"><!--<?php echo $image['caption']; ?>--></a>
+        <?php $imageType = get_sub_field('inline_item');?>
+        <?php if($imageType == 'yes') :?>
+            <div class="inline-wrapper">
+                <a href="<?php echo $image['url']; ?>" class="inline">
+                    <img src="<?php echo $image['url']; ?>" />
+                </a>
+            </div>
+        <?php endif;?>
+        <?php if($imageType == 'no') :?>
+            <a href="<?php echo $image['url']; ?>" class="lightbox-gallery <?php echo $imageType;?>"  alt="<?php echo $image['alt']; ?>" style="background-image: url(<?php echo $image['url']; ?>); height:<?php echo $imageHeight;?>vh;"><!--<?php echo $image['caption']; ?>--></a>
+        <?php endif;?>
+
     </div><!--fullwidth-->
 
 <?php elseif( get_row_layout() == 'halves' ):?>

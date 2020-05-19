@@ -28,11 +28,16 @@
                 display: none;
             }
             a {
+                transition: all .5s ease;
                 padding: 1rem 2rem;
                 font-size: $font_size * 1.4px;
                 font-family: $font_primary;
                 text-decoration:none;
                 color: $color_grey_mid;
+                cursor: pointer;
+                &:hover {
+                    color: $color_brand_highlight;
+                }
             }
             &:first-of-type a {
                 padding-left:0;
@@ -213,10 +218,10 @@
     font-family: $font_secondary;
     font-weight: 200;
     color: $color_grey_light;
-    opacity: 0;
-    transition: opacity 1s ease;
+    transition: margin 1s ease;
+    margin-left: -20vw;
     &.active {
-        opacity: 1;
+        margin-left: 0;
     }
 
     &__item {
@@ -272,6 +277,7 @@
         transition:transform 1s ease;
         border-radius:1rem;
         min-height: 20rem;
+        background-position: left center !important; /*Ensure logos are aligned*/
         a {
             position: absolute;
             display: block;
@@ -445,6 +451,7 @@
         .image {
             @include backgroundCover;
             @include emphasisShadow;
+            transition: all .5s ease;
             border-radius:1rem;
             margin-bottom: 1rem;
             height:13rem;
@@ -452,6 +459,10 @@
                 display: block;
                 height: 100%;
                 width: 100%;
+            }
+            &:hover {
+                box-shadow: none;
+                border:1px solid $color_brand_highlight;
             }
         }
         .date {
@@ -589,9 +600,33 @@
         @include backgroundCover;
         @include emphasisShadow
         display: block;
+        transition: all 0.5s ease;
         border-radius:1rem;
-
         height: 15rem;
+        &.inline {
+            height: auto;
+        }
+        &:hover {
+            box-shadow: none;
+            border-color: $color_brand_highlight;
+        }
+    }
+    .inline-wrapper {
+        @include emphasisShadow;
+        grid-column: 1/13;
+        overflow:hidden;
+        transition: all 0.5s ease;
+        border-radius:1rem;
+        width:100%;
+        height: auto;
+        &:hover {
+            box-shadow: none;
+            border-color: $color_brand_highlight;
+        }
+    }
+    img {
+        width: calc(100% + 1rem);
+        margin: -.5rem;
     }
     &__fullwidth a {
         grid-column: span 12;
@@ -801,7 +836,7 @@ footer {
     }
     p {
         margin-bottom: 2rem;
-        width: 65%; 
+        width: 65%;
     }
 }
 .footer-contact {

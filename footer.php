@@ -32,16 +32,19 @@
 
 									<?php get_template_part("template-parts/social");?>
 
-									<a href="<?php the_sub_field('button_target');?>" class="button button__ghost">Directions</a>
+									<a href="<?php the_sub_field('button_target');?>" class="button button__ghost mb3">Directions</a>
 								</div>
 							</div>
 						</div>
 						<div class="content-wrapper darkest-wrapper">
 							<div class="container">
 								<div class="mandatory">
-									<p>© Silverless Ltd <?php echo date('Y');?><br/>Registered in England, No. 8437159  VAT No. GB 101 7040 78
-										<a href="/privacy-policy/">Privacy policy</a>
-										<a href="/terms-conditions/">Terms & Conditions</a></p>
+									<p>© Silverless Ltd <?php echo date('Y');?><br/>Registered in England, No. 8437159  <span class="no-wrap">VAT No. GB 101 7040 78</span>
+										<span class="no-wrap">
+											<a href="/privacy-policy/">Privacy policy</a>
+											<a href="/terms-conditions/">Terms & Conditions</a>
+										</span>
+									</p>
 								</div>
 							</div>
 						</div>
