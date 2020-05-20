@@ -109,6 +109,9 @@
     font-size:5em;
   &.slide1 {
       transform-origin:top;
+      .inner-content .heading {
+        line-height: 1.95rem;
+      }
   }
   &.active {
     @include emphasisShadow;

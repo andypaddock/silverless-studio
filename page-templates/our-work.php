@@ -13,7 +13,7 @@ get_header();?>
     </div>
     <div class="container">
         <div class="content">
-            <h3 class="heading heading__2"><?php the_field('heading');?></h3>
+            <h1 class="heading heading__2"><?php the_field('heading');?></h1>
             <p><?php the_field('copy');?></p>
             <?php get_template_part("inc/img/arrow");?>
         </div>
@@ -26,7 +26,7 @@ get_header();?>
             $leaderBackground = get_sub_field('background_image');?>
             <div class="container content">
             <div class="copy">
-                <h3 class="heading heading__4"><?php the_sub_field('heading');?></h3>
+                <h2 class="heading heading__4"><?php the_sub_field('heading');?></h2>
                 <p><?php the_sub_field('copy');?></p>
                 <a href="<?php the_sub_field('button_target');?>" class="button button__bare button__bare--brand"><?php the_sub_field('button_text');?></a>
             </div>
@@ -42,7 +42,7 @@ get_header();?>
             <div class="container content cta" style="background:url(<?php echo $ctaBackground['url'];?>);">
                 <div class="content">
                     <h3 class="heading heading__4"><?php the_field('cta_heading');?></h3>
-                    <a href="<?php the_sub_field('button_target');?>" class="button button__bare"><?php the_field('cta_button_text');?></a>
+                    <a href="<?php the_field('cta_button_target');?>" class="button button__bare"><?php the_field('cta_button_text');?></a>
                 </div>
             </div>
     </div>

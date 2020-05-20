@@ -6,7 +6,7 @@
 ?>
 			</main>
 			<?php $footerImage = get_field('background_image', 'options');?>
-			<footer class="footer">
+			<footer class="footer" role="contentinfo">
 				<div class="wrapper">
 					<div class="container-overflow-right">
 						<div class="content-wrapper image-wrapper dark-overlay" style="background:url(<?php echo $footerImage['url'];?>);">
@@ -26,13 +26,11 @@
 								<a href="<?php echo get_home_url(); ?>" class="silverless"><?php get_template_part('inc/img/silverless', 'logo');?></a>
 								<div class="footer-contact">
 									<p>
-										<a href="">+44 (0)1672 556532</a>
-										<a href="">hello@silverless.co.uk</a>
+										<a href="tel:+44 (0)1672 556532">+44 (0)1672 556532</a>
+										<a href="mailto:hello@silverless.co.uk">hello@silverless.co.uk</a>
 									</p>
-
 									<?php get_template_part("template-parts/social");?>
-
-									<a href="<?php the_sub_field('button_target');?>" class="button button__ghost mb3">Directions</a>
+									<a href="https://www.google.com/maps/dir//51.4225298,-1.7189314/@51.422194,-1.7205367,272m/data=!3m1!1e3" class="button button__ghost mb3" target="_blank">Directions</a>
 								</div>
 							</div>
 						</div>
@@ -52,6 +50,6 @@
 				</div>
 			</footer>
 		</div><!-- #page -->
-	<?php wp_footer(); ?>
+		<?php wp_footer(); ?>
 	</body>
 </html>

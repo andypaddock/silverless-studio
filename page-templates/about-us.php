@@ -13,7 +13,7 @@ get_header();?>
     </div>
     <div class="container">
         <div class="content">
-            <h3 class="heading heading__2"><?php the_field('heading');?></h3>
+            <h1 class="heading heading__2"><?php the_field('heading');?></h1>
             <p><?php the_field('copy');?></p>
             <?php get_template_part("inc/img/arrow");?>
         </div>
@@ -41,7 +41,7 @@ get_header();?>
             <div class="text-content">
                 <?php if( have_rows('page_copy') ):
     			while( have_rows('page_copy') ): the_row();?>
-                    <h3 class="heading heading__3 trigger"><?php the_sub_field('heading');?></h3>
+                    <h2 class="heading heading__3 trigger"><?php the_sub_field('heading');?></h2>
                     <p class="sub-heading"><?php the_sub_field('sub_heading');?></p>
                     <div class="strong-lead-para"><?php the_sub_field('copy');?></div>
                 <?php endwhile; endif;?>

@@ -37,7 +37,7 @@ get_header();?>
 					<?php if($slideType == 'first'):?>
 						<h3 class="heading heading__1"><?php the_sub_field('heading');?></h3>
 						<div class="inner-content">
-						<h2 class="heading heading__5 mb2"><?php the_sub_field('copy');?></h2>
+						<h1 class="heading heading__5 mb2"><?php the_sub_field('copy');?></h1>
 						<a href="<?php the_sub_field('button_target');?>" class="button button__ghost"><?php the_sub_field('button_text');?></a>
 					</div>
 					<?php elseif ($slideType == 'work'):?>
@@ -79,7 +79,7 @@ get_header();?>
 			<div class="news-feed__item">
 				<div class="image" style="background:url(<?php echo $postThumbImage['url'];?>);"><a href="<?php the_permalink(); ?>"></a></div>
 				<p class="date"><?php echo get_the_date('d.m.Y'); ?></p>
-				<h3 class="heading heading__7"><?php the_title(); ?></h4>
+				<h2 class="heading heading__7"><?php the_title(); ?></h4>
 				<?php the_excerpt(); ?>
 			<a href="<?php the_permalink(); ?>" class="button button__bare button__bare--brand">Read More</a>
 			</div>

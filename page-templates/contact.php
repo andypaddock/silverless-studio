@@ -12,7 +12,7 @@ get_header();?>
     <div class="content-wrapper contact" style="background:url(<?php echo $heroBackground['url'];?>);"></div>
     <div class="container">
         <div class="content">
-            <h3 class="heading heading__2"><?php the_field('heading');?></h3>
+            <h1 class="heading heading__2"><?php the_field('heading');?></h1>
             <p><?php the_field('copy');?></p>
             <?php get_template_part("inc/img/arrow");?>
         </div>
@@ -25,7 +25,7 @@ get_header();?>
                 <div class="sticky">
                     <h2 class="heading heading__7">Silverless Ltd</h2>
                     <p><?php the_field('address', 'options');?></p>
-                    <a href="https://what3words.com/potato.balanced.argue" class="naked-link mt1">/// potato.balanced.argue</a>
+                    <a href="https://what3words.com/potato.balanced.argue" class="naked-link mt1" target="_blank">/// potato.balanced.argue</a>
                     <a href="mailto:<?php the_field('email_-_careers', 'options');?>" class="naked-link mt1"><?php the_field('email_-_careers', 'options');?></a>
                     <br/>
                     <a href="tel:<?php the_field('phone_number', 'options');?>" class="naked-link"><?php the_field('phone_number', 'options');?></a>

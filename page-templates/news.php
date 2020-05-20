@@ -13,7 +13,7 @@ get_header();?>
     </div>
     <div class="container">
         <div class="content">
-            <h3 class="heading heading__2"><?php the_field('heading');?></h3>
+            <h1 class="heading heading__2"><?php the_field('heading');?></h1>
             <p><?php the_field('copy');?></p>
             <?php get_template_part("inc/img/arrow");?>
         </div>
@@ -35,7 +35,7 @@ get_header();?>
     			<div class="news-feed__item news-summary__item">
     				<div class="image" style="background:url(<?php echo $postThumbImage['url'];?>);"><a href="<?php the_permalink(); ?>"></a></div>
     				<p class="date"><?php echo get_the_date('d.m.Y'); ?></p>
-    				<h3 class="heading heading__7"><?php the_title(); ?></h4>
+    				<h2 class="heading heading__4"><?php the_title(); ?></h2>
     				<?php the_excerpt(); ?>
     			<a href="<?php the_permalink(); ?>" class="button button__bare button__bare--brand">Read More</a>
     			</div>
@@ -51,7 +51,7 @@ get_header();?>
             <div class="container content cta" style="background:url(<?php echo $ctaBackground['url'];?>);">
                 <div class="content">
                     <h3 class="heading heading__4"><?php the_field('cta_heading');?></h3>
-                    <a href="<?php the_sub_field('button_target');?>" class="button button__bare"><?php the_field('cta_button_text');?></a>
+                    <a href="<?php the_field('cta_button_target');?>" class="button button__bare"><?php the_field('cta_button_text');?></a>
                 </div>
             </div>
     </div>

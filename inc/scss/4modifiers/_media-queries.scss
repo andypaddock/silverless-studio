@@ -295,7 +295,7 @@ main {
 		}
 		i {
 			width: 2rem;
-			color: $color_grey_mid;
+			color: $color_brand_highlight;
 		}
 		.socials {
 			a {
@@ -308,6 +308,13 @@ main {
 	}
 	svg path {
 		fill:white;
+	}
+	.socials {
+		border-top: 1px solid #e4e4e4;
+    	padding-top: .5rem;
+		i {
+			color: #9a9a9a;
+		}
 	}
 }
 .home .mobile-nav svg path {
@@ -386,12 +393,16 @@ main {
     grid-column: 1/13;
 }
 .leaders {
+	>.container {
+		margin-bottom: 5rem;
+	}
 	.copy,
 	.image {
 		grid-column: 1/-1;
 	}
 	.image {
 		min-height: 10rem;
+	    margin-bottom: .5rem;
 	}
 }
 
@@ -456,6 +467,7 @@ main {
 	padding: 2rem 0 2rem 1rem;
 	.heading {
 	    grid-column: 1/13;
+		margin-bottom: 1rem;
 	}
 	.content {
 		grid-column: 1/12;
@@ -465,16 +477,23 @@ main {
 	.image {
 		grid-column: 1/12;
 		min-height: 8rem;
+		margin-bottom: 5rem;
 	}
-}
-.toggle-list {
-    padding-left: 2rem;
 }
 .toggle-list__item .trigger:before {
     top: 11px;
 }
 .toggle-list__item .trigger:after {
     top: 4px;
+}
+.inspired .heading {
+    padding-left: 2rem;
+	&:before {
+		left: 0;
+	}
+	&:after {
+		left:5px;
+	}
 }
 .team {
 	padding:2rem 1rem;
